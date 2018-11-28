@@ -59,14 +59,14 @@ minima: MAINOPTIONS = -DMINIMA
 iverify: MAINOPTIONS = -DIVERIFY
 
 OPT = -O -mtune=nocona \
--fforce-mem -foptimize-sibling-calls -fstrength-reduce \
+-foptimize-sibling-calls -fstrength-reduce \
 -fexpensive-optimizations \
 -fsched-interblock -fsched-spec -fpeephole2 \
 -freorder-blocks  -freorder-functions \
 -funit-at-a-time \
 -falign-functions  -falign-jumps -falign-loops -falign-labels \
 -fcrossjumping \
--finline-functions -fweb, -frename-registers -funswitch-loops \
+-finline-functions -fweb -frename-registers -funswitch-loops \
 -fregmove \
 -fcse-follow-jumps \
 -fcse-skip-blocks -frerun-cse-after-loop  -frerun-loop-opt -fgcse \
@@ -151,7 +151,8 @@ else
   OTHEROBJS +=
 #  LIBRARIES = -lpthread -lc -lX11 -lm
 #  EARLYLIBS = -L/opt/ppc64/X11R6/lib
-  LIBRARIES = -lpthread -lc -lX11 -lm -lpcap
+#  LIBRARIES = -lpthread -lc -lX11 -lm -lpcap
+  LIBRARIES = -lpthread -lc -lX11 -lm
   EARLYLIBS = -L/usr/X11R6/lib64 -L/usr/X11R6/lib
 endif
 
