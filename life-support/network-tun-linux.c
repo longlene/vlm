@@ -234,7 +234,7 @@ static void InitializeNetChannel (NetworkInterface* interface, int unitNumber,
   }
 
   //  strcpy(tun_name, ifr.ifr_name);
-  system("/sbin/ifconfig tun0 10.0.0.1 dstaddr 10.0.0.2 netmask 255.255.255.0");
+  system("/bin/ifconfig tun0 10.0.0.1 dstaddr 10.0.0.2 netmask 255.255.255.0");
 
   /*
    * Create entries in the host's ARP table for each IP address assigned
